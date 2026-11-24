@@ -1,0 +1,721 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.3em;
+}
+h3 {
+    font-size: 1.2em;
+}
+
+/* Style the header */
+header {
+  background-color: #CBC9A8;
+  padding: 10px;
+  text-align: center;
+}
+.white {
+  color: white;
+}
+.important {
+  color: #009193;
+  font-size: 1.0em;
+  font-weight: 700;
+}
+.margin-10 {
+    margin-top: 10px;
+}
+.margin-20 {
+    margin-top: 20px;
+}
+.menu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+fieldset {
+    font-family: inherit;
+    border-radius: 4px;
+    padding: 32px;
+}
+
+fieldset legend {
+    font-size: .75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(17,17,19,.5);
+    padding: 0 1rem;
+    margin-left: -1rem;
+    top: 2px;
+    position: relative;
+    line-height: 0;
+}
+
+fieldset, form {
+    margin-bottom: 16px;
+}
+
+fieldset, figure pre {
+    border: 1px solid rgba(17,17,19,.1);
+}
+
+article {
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 300px;
+  padding-right: 300px;
+  background-color: #ffffff;
+  width:100%;
+  min-height: 800px;
+}
+article.wide {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+article.narrow {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+.records {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.notebook {
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #f1f1f1;
+  width:100%;
+  height: 800px;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.foxden-center {
+  padding-top: 10px;
+  padding-left: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  width:100%;
+  height: 800px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #D6D6D6;
+  text-align: center;
+  color: white;
+  min-height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+#caseInsensitive {
+  transform: scale(1.5);
+  margin-right: 8px;
+}
+#help-btn img {
+  vertical-align: middle;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.huge {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+.large {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.medium {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.upper {
+    text-transform: uppercase;
+    color: rgba(17,17,19,.5);
+}
+
+.record {
+    padding: 30px;
+}
+.width-100 {
+    display: inline-block;
+    width: 100px;
+}
+.width-200 {
+    display: inline-block;
+    width: 200px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+/*    margin-top:6px;*/
+/*    border-top-width:1px;*/
+}
+.show_inline {
+    display: inline;
+/*    color: black;*/
+/*    background-color: white;*/
+}
+
+.submenu {
+    background-color: lightgrey;
+    margin-left: 5px;
+}
+.message {
+    width: 600px;
+}
+.s3-record {
+    font-family: Courier, monospace;
+    font-size: 18px;
+}
+.min-height {
+    min-height: 700px;
+}
+
+/*
+ * Google map settings 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+    height: 600px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+
+/*
+ * overwrite superkube
+ */
+.sidebar {
+    background-color: #EBEBEB;
+}
+.button-foxden {
+    --button-background-color: #197B7E;
+}
+.button-dark-foxden {
+    --button-background-color: #F4BD8A;
+}
+.button-light-foxden {
+    --button-background-color: #F8E0AA;
+}
+.button-lighter-foxden {
+    --button-background-color: #FBECC8;
+}
+.button-very-light-foxden {
+    --button-background-color: #FDF4DF;
+}
+.button-help-foxden {
+    --button-background-color: #D6D6D6;
+}
+.round {
+    padding: 10px;
+    border: 1px dashed grey;
+    border-radius: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.srv-advance {
+  border: 0px;
+  padding: 10px;
+  /*
+  background-color: #F4BD8A;
+  */
+}
+
+.srv-fair {
+  border: 0px;
+  padding: 10px;
+  /*
+  background-color: #F4E1D0;
+  */
+}
+/*.sort-container {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+.sort-container {
+    position: relative; /* Ensures the child element is positioned relative to this container */
+    height: 30px; /* Example height */
+}
+
+.dropdown {
+    position: absolute;
+    height: 30px;
+    background-color: grey;
+    color: white;
+    bottom: 0; /* Aligns the drop-down menu to the bottom of the container */
+}
+
+#popupMenu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    z-index: 10;
+    width: 90%; /* Width of the pop-up window */
+    height: 80%; /* Height of the pop-up window */
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+#gearIcon {
+    float: right;
+    cursor: pointer;
+    width: 30px;
+}
+
+#scrollableTable {
+    width: 100%;
+    height: 80%;
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+#checkboxTable {
+    width: 100%; /* Ensure the table takes up full width */
+    border-collapse: collapse;
+}
+
+#checkboxTable td {
+    padding: 5px;
+}
+.attributeCheckbox {
+}
+.doiPublic {
+  background-color: #0096FF;
+  color: white;
+  padding: 1px;
+  font-weight: 700;
+}
+.doiDraft {
+  background-color: #CBC9A8;
+  padding: 2px;
+  font-weight: 700;
+}
+.recVersion {
+  background-color: #FF9300;
+  color: white;
+  padding: 2px;
+  font-weight: 700;
+}
+.add-btn {
+  margin-top: 0.5em;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: green;
+}
+.prov-text {
+  color: #89B9D8;           /* grey-green color */
+  text-decoration: none;    /* remove underline */
+  font-family: monospace;   /* use monospace font like <pre> */
+}
+.prov-link {
+  color: #0077cc;           /* blueish color */
+  text-decoration: none;    /* remove underline */
+  cursor: pointer;          /* pointer cursor on hover */
+  font-family: monospace;   /* use monospace font like <pre> */
+  font-weight: 700;
+}
+.prov-link:visited {
+  color: #5a4ca1;           /* purple-ish for visited links */
+}
+.prov-link:hover {
+  color: #005fa3;           /* slightly darker blue on hover */
+  text-decoration: underline;
+}
+.parent-list { list-style: none; padding: 0; }
+.parent-list li { margin: 5px 0; }
+
+.overlay-example {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay content window */
+.overlay-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 800px;
+  max-height: 90vh;        /* Limit height to 90% of viewport */
+  overflow-y: auto;        /* Enable scrolling if content is too tall */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+table.table-sync {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.table-sync th,
+table.table-sync td {
+  padding: 10px;
+  border: 1px solid #ddd; /* optional */
+  text-align: left;       /* optional */
+}
+
+/* css for struct form button */
+.repeatable-fieldset {
+  position: relative;
+  padding: 1rem 1.25rem 1.25rem;
+  border-radius: 6px;
+}
+
+.repeatable-actions {
+  display: flex;
+  margin-top: 0.75rem;
+  /* align right */
+  /* justify-content: flex-end; */
+  /* align left */
+  justify-content: flex-start;
+  padding-left: 0.25rem;
+}
+
+.btn-add {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid #4a90e2;
+  background-color: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+}
+.legend-style {
+  font-size: .75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(17,17,19,.5);
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+.no-horizontal-scroll {
+  overflow-x: hidden;      /* prevent horizontal scroll */
+  word-wrap: break-word;   /* legacy support */
+  overflow-wrap: break-word; /* modern standard */
+  white-space: normal;     /* allow wrapping */
+}
+
+/*
+ * FOXDEN user info pop-up CSS rules
+ */
+/* user info overlay settings */
+#user-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+#user-popup-overlay.active {
+  display: flex;
+}
+#user-popup {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 50%;
+  max-width: 50%;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+#user-popup-header {
+  display: none;           /* hidden until content is loaded */
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+#user-popup-header.visible {
+  display: flex;
+}
+#user-popup-close {
+  width: 50%
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+#user-popup-close:hover {
+  opacity: 1;
+}
+
+/*
+ * FOXDEN Notes CSS rules
+ */
+.entry-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    border: 2px solid #ccc;        /* solid border */
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+
+    background: #fff;
+}
+.entry-card:nth-child(odd) {
+    background: #ffffff;
+}
+
+.entry-card:nth-child(even) {
+    background: #f5f5f5;  /* light gray */
+}
+.entry-card:hover {
+    background: #eaeaea;
+}
+
+/* right side content */
+.entry-content {
+    flex: 1;
+}
+
+/* meta row */
+.entry-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* body text aligned under meta */
+.entry-body {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* user emphasis */
+.user {
+    font-weight: bold;
+}
+
+/*
+ * CSS rules for record.tmpl to show links and icons within FOXDEN record
+ */
+
+/* container for all links */
+.record-actions {
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping on small screens */
+    gap: 12px;                /* space between links */
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* each link */
+.record-actions a {
+    display: inline-flex;     /* key for icon + text alignment */
+    align-items: center;      /* vertical alignment */
+    gap: 6px;                 /* space between icon and text */
+
+    text-decoration: none;
+    color: #2c3e50;           /* custom color */
+    padding: 4px 6px;
+    border-radius: 4px;
+
+    transition: all 0.2s ease;
+}
+
+/* icons */
+.record-actions a img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* hover effect */
+.record-actions a:hover {
+    background-color: #f0f2f5;
+    color: #007bff;
+}
+.record-actions a:hover img {
+    opacity: 0.8;
+}
+
+/* optional: active/pressed feel */
+.record-actions a:active {
+    transform: scale(0.97);
+}
+
+.record-actions a {
+    background: #fafafa;
+    border: 1px solid #ddd;
+}
+
+/* form should behave like inline element */
+.record-actions-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/* button styled like your links */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: inherit;
+    color: #2c3e50;
+
+    padding: 4px 6px;
+    border-radius: 4px;
+
+    transition: all 0.2s ease;
+}
+
+/* icon */
+.action-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+/* hover = same as links */
+.action-btn:hover {
+    background-color: #f0f2f5;
+    color: #007bff;
+}
+
+/* static (non-clickable) state */
+.action-static {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #888;
+    padding: 4px 6px;
+}
+
+.action-static img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+
+/* GREY: Draft -> Public */
+.action-grey {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* GREEN: Create DOI */
+.action-green {
+    background-color: #28a745;
+    color: white;
+}
+
+/* RED: Published DOI */
+.action-red {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* ensure icons look good on colored background */
+.action-btn img,
+.action-static img {
+    filter: brightness(0) invert(1); /* makes icons white */
+}
+.action-grey:hover {
+    background-color: #d5d5d5;
+}
+
+.action-green:hover {
+    background-color: #CDF4C4;
+}
+
+.action-red {
+    opacity: 0.85;   /* static but slightly muted */
+}
+
+/* cytoscape */
+#graph { display: flex; flex-direction: column; width: 100%; height: 80vh; min-height: 500px; }
+#graph-top { flex: 1 1 60%; display: flex; flex-direction: column; min-height: 0; }
+#cy { flex: 1 1 auto; min-height: 0; }
+#details {
+  flex: 1 1 40%;
+  min-height: 0;
+  padding: 12px 16px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+#legend { padding: 12px 16px; border-bottom: 1px solid #ddd; font-size: 12px; }
+.legend-item { display: inline-flex; align-items: center; margin-right: 14px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; display: inline-block; }
+#controls { padding: 0 16px 12px; font-size: 12px; color: #666; }
+button { font-size: 11px; padding: 2px 8px; margin-right: 6px; cursor: pointer; }
