@@ -56,7 +56,7 @@ func Server() {
 	Verbose = srvConfig.Config.AuthProxyServer.WebServer.Verbose
 	// initialize http request
 	_httpReadRequest = services.NewHttpRequest("read", Verbose)
-	log.Println("Starting APS with backends: %+v", srvConfig.Config.AuthProxyServer.Backends)
+	log.Printf("Starting APS with backends: %+v", srvConfig.Config.AuthProxyServer.Backends)
 
 	// setup web router and start the service
 	r := setupRouter()
