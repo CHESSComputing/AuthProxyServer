@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"log"
 
 	srvConfig "github.com/CHESSComputing/golib/config"
 	server "github.com/CHESSComputing/golib/server"
@@ -32,8 +33,11 @@ func setupRouter() *gin.Engine {
 		{Method: "GET", Path: "/", Handler: MainHandler},
 		{Method: "GET", Path: "/login", Handler: LoginHandler},
 		{Method: "GET", Path: "/logout", Handler: LogoutHandler},
-		{Method: "GET", Path: "/id4b/submit", Handler: ProxyHandler},
-		{Method: "GET", Path: "/id4b/analysis", Handler: ProxyHandler},
+		{Method: "GET", Path: "/id4b", Handler: ProxyHandler},
+		{Method: "GET", Path: "/id3a", Handler: ProxyHandler},
+		{Method: "GET", Path: "/id3b", Handler: ProxyHandler},
+		{Method: "GET", Path: "/id7a", Handler: ProxyHandler},
+		{Method: "GET", Path: "/id1a3", Handler: ProxyHandler},
 		{Method: "GET", Path: "/github/login", Handler: GithubOauthLoginHandler},
 		{Method: "GET", Path: "/github/callback", Handler: GithubCallBackHandler},
 		{Method: "GET", Path: "/google/login", Handler: GoogleOauthLoginHandler},
@@ -52,6 +56,7 @@ func Server() {
 	Verbose = srvConfig.Config.AuthProxyServer.WebServer.Verbose
 	// initialize http request
 	_httpReadRequest = services.NewHttpRequest("read", Verbose)
+	log.Println("Starting APS with backends: %+v", srvConfig.Config.AuthProxyServer.Backends)
 
 	// setup web router and start the service
 	r := setupRouter()
